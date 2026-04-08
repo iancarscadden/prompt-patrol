@@ -1,0 +1,11 @@
+# Inference-only dependencies for the jailbreak detection server.
+# Loose minimums (not exact pins) so this installs cleanly on Linux / macOS /
+# Windows and Python 3.10+. ModernBERT support requires transformers >= 4.48.
+
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.0
+torch>=2.0
+transformers>=4.48
+safetensors>=0.4
+requests>=2.28
