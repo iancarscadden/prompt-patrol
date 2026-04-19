@@ -2,11 +2,13 @@
 
 HTTP server that classifies arbitrary text as **benign** or **jailbreak / prompt-injection**, backed by a fine-tuned ModernBERT-base model. POST text to `/classify`, get back a label, confidence, and per-class probabilities.
 
+`train_jailbreak_colab.ipynb` is the Colab notebook used to fine-tune and evaluate the three candidate models (BERT-base, DeBERTa-v3-base, ModernBERT-base). ModernBERT won and is the model served here.
+
 ---
 
 ## How it performs
 
-Fine-tuned `answerdotai/ModernBERT-base` (149M params) on a combined, deduplicated dataset of three open prompt-injection corpora (17,184 unique samples — `jackhhao/jailbreak-classification`, `neuralchemy/Prompt-injection-dataset`, `xTRam1/safe-guard-prompt-injection`). Held-out test set is 3,437 samples, touched once at the end.
+Fine-tuned `answerdotai/ModernBERT-base` (149M params) on a combined, deduplicated dataset of three open prompt-injection corpora (17,184 unique samples): `jackhhao/jailbreak-classification`, `neuralchemy/Prompt-injection-dataset`, `xTRam1/safe-guard-prompt-injection`. Held-out test set is 3,437 samples, touched once at the end.
 
 **Test-set metrics:**
 

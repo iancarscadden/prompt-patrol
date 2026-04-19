@@ -1,29 +1,20 @@
-# python
 __pycache__/
 *.pyc
 *.pyo
 .DS_Store
 
-# virtualenv — each person builds their own from requirements.txt
 venv/
 
-# the one model weight file is 571 MB — too big for github.
-# teammates download it from Google Drive and drop it in.
-# everything else in models/modernbert-jailbreak/ (config, tokenizer) is committed.
 models/modernbert-jailbreak/model.safetensors
 
-# training outputs — kept locally for the writeup, not shipped
 _checkpoints/
 results/
 
-# jupyter
 .ipynb_checkpoints/
 
-# training-side files — kept locally, not shipped to teammates.
-# the deploy repo only needs server.py, tests.py, requirements.txt, README.md.
 train.py
 train.ipynb
-train_jailbreak_colab.ipynb
+train_jailbreak_colab_old.ipynb
 training.log
 inspect_data.py
 smoke_test.py
